@@ -1,42 +1,42 @@
 import { PartnershipStep } from "../types/_partnership-step";
 import {
-  PillIcon,
-  CaduceusIcon,
-  UserLoveIcon,
-  CalendarClockIcon,
+  JobShareIcon,
+  AddInvoiceIcon,
+  CheckmarkSquare04Icon,
+  Cashier02Icon,
 } from "@hugeicons/core-free-icons";
 
 export const PartnershipFlowContent: PartnershipStep[] = [
   {
     id: "1",
     step: 1,
-    title: "Le client recherche un médicament",
+    title: "Rejoignez MediGo",
     description:
-      "L'utilisateur utilise MediGo pour trouver le médicament dont il a besoin.",
-    Icon: PillIcon,
+      "Inscrivez votre pharmacie et fournissez les informations nécessaires à la vérification de votre établissement.",
+    Icon: JobShareIcon,
   },
   {
     id: "2",
     step: 2,
-    title: "MediGo transmet la demande",
+    title: "Recevez des demandes",
     description:
-      "Notre plateforme envoie la demande aux pharmacies partenaires disponibles.",
-    Icon: CaduceusIcon,
+      "Lorsqu'un client recherche un médicament disponible dans votre zone, MediGo vous transmet la demande directement via WhatsApp.",
+    Icon: AddInvoiceIcon,
   },
   {
     id: "3",
     step: 3,
-    title: "Une pharmacie confirme",
+    title: "Confirmez la disponibilité",
     description:
-      "La pharmacie confirme la disponibilité, le prix et les délais de retrait ou livraison.",
-    Icon: UserLoveIcon,
+      "Vous indiquez simplement si le médicament est disponible ainsi que son prix. Aucun logiciel complexe n'est nécessaire.",
+    Icon: CheckmarkSquare04Icon,
   },
   {
     id: "4",
     step: 4,
-    title: "Le client récupère ou se fait livrer",
+    title: "Réalisez la vente",
     description:
-      "Retrait en pharmacie ou livraison à domicile selon votre choix.",
-    Icon: CalendarClockIcon,
+      "Le client récupère sa commande en pharmacie ou choisit la livraison lorsque celle-ci est disponible.",
+    Icon: Cashier02Icon,
   },
 ];

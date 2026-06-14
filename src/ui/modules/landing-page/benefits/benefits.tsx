@@ -24,7 +24,7 @@ export const Benefits = () => {
           {BenefitsContent.map(({ id, title, description, Icon }) => (
             <Container
               key={id}
-              className="bg-[#1a202e] p-4 rounded-lg flex flex-col gap-4"
+              className="bg-[#1a202e] hover:bg-[#2d3748] hover:cursor-pointer p-4 rounded-lg flex flex-col gap-4"
             >
               {Icon && (
                 <Container className="flex items-center justify-center w-20 h-20 rounded-full bg-[#0f172a]">
