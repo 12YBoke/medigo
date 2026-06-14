@@ -8,7 +8,7 @@ import { Button } from "@/ui/components/button/button";
 
 export const Benefits = () => {
   return (
-    <Container className="relative bg-[#091023]">
+    <Container id="pourquoi-medigo" className="relative scroll-mt-24 bg-[#091023]">
       <Container className="py-20 md:py-40 lg:py-52 flex flex-col gap-12 md:gap-16 items-center px-4 lg:px-16 2xl:px-32">
         <Container className="flex flex-col items-center gap-4 text-center max-w-2xl">
           <Typography variant="display" className="text-white">

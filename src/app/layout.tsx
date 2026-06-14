@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/shadcnui/ui/tooltip";
 import { Navigation } from "@/ui/modules/navigation/navigation";
+import { Footer } from "@/ui/modules/footer/footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -29,7 +30,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <TooltipProvider>
           <Navigation />
-          <span>{children}</span>
+          <div className="flex-1">{children}</div>
+          <Footer />
         </TooltipProvider>
       </body>
     </html>

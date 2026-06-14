@@ -18,7 +18,7 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <Container className="relative bg-primary-50">
+    <Container id="comment-ca-marche" className="relative scroll-mt-24 bg-primary-50">
       <Container className="py-20 md:py-40 lg:py-52 flex flex-col gap-12 md:gap-16 items-center ">
         <Container className="flex flex-col items-center gap-4 text-center max-w-2xl">
           <Typography variant="display">Comment ça marche</Typography>
@@ -30,7 +30,7 @@ export const HowItWorks = () => {
 
         <Container className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 lg:px-16 2xl:px-24 gap-1">
           {HowItWorksContent.map(
-            ({ id, step, title, description, Icon }, index) => (
+            ({ id, title, description, Icon }, index) => (
               <Container
                 key={id}
                 className={clsx(

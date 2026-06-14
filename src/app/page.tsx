@@ -16,8 +16,8 @@ export default function Home() {
       <Approach />
       <PartnershipFlow />
       <ForPharmacies />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
     </main>
   );
 }
