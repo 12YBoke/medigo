@@ -8,7 +8,10 @@ import { Button } from "@/ui/components/button/button";
 
 export const Benefits = () => {
   return (
-    <Container id="pourquoi-medigo" className="relative scroll-mt-24 bg-[#091023]">
+    <Container
+      id="pourquoi-medigo"
+      className="relative scroll-mt-24 bg-[#091023]"
+    >
       <Container className="py-20 md:py-40 lg:py-52 flex flex-col gap-12 md:gap-16 items-center px-4 lg:px-16 2xl:px-32">
         <Container className="flex flex-col items-center gap-4 text-center max-w-2xl">
           <Typography variant="display" className="text-white">
@@ -24,7 +27,7 @@ export const Benefits = () => {
           {BenefitsContent.map(({ id, title, description, Icon }) => (
             <Container
               key={id}
-              className="bg-[#1a202e] hover:bg-[#2d3748] hover:cursor-pointer p-4 rounded-lg flex flex-col gap-4"
+              className="bg-[#1a202e] hover:bg-[#2d3748] hover:cursor-pointer animate p-4 rounded-lg flex flex-col gap-4"
             >
               {Icon && (
                 <Container className="flex items-center justify-center w-20 h-20 rounded-full bg-[#0f172a]">

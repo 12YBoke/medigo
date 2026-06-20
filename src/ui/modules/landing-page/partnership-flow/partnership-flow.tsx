@@ -11,7 +11,7 @@ export const PartnershipFlow = () => {
   return (
     <Container className="relative bg-black">
       <Container className="absolute top-0 bottom-0 left-0 right-0">
-        <ConnectingDots dotColor="#f5d0fe" dotCount={100} lineDistance={100} />
+        <ConnectingDots dotColor="#e0f6d1" dotCount={100} lineDistance={100} />
       </Container>
       <Container className="py-20 md:py-32 lg:py-40 flex flex-col gap-12 items-center px-4 lg:px-16 2xl:px-24">
         <Container className="flex flex-col items-center gap-4 text-center max-w-2xl">

@@ -49,7 +49,9 @@ export const HeroBanner = () => {
               className="flex flex-col items-center gap-4 flex-1/4"
             >
               {Icon && (
-                <Icons icon={Icon} className="text-primary-200" size={60} />
+                <Container className="flex items-center justify-center w-28 h-28 rounded-full bg-[#222]">
+                  <Icons icon={Icon} className="text-primary-200" size={60} />
+                </Container>
               )}
               <CountUpAnimation
                 to={count}
