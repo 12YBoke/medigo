@@ -8,6 +8,10 @@ import { Container } from "@/ui/components/container/container";
 import { Typography } from "@/ui/components/typography/typography";
 import { ActiveLink } from "@/ui/components/active-links/active-links";
 import { Button } from "@/ui/components/button/button";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Icons } from "@/ui/components/icons/icons";
+import { WhatsappIcon } from "@hugeicons/core-free-icons";
+import { WHATSAPP_NUMBER } from "@/lib/contacts";
 
 interface Props {
   className?: string;
@@ -21,6 +25,9 @@ interface Props {
 }
 
 export const Navigation = ({ className, notification }: Props) => {
+  const isMobile = useIsMobile();
+
+  console.log(isMobile);
   return (
     <header className={clsx("fixed z-50 w-full", className)}>
       {notification && (
@@ -74,7 +81,19 @@ export const Navigation = ({ className, notification }: Props) => {
           </Container>
         </Container>
         <Container className="flex flex-row gap-4 justify-center items-center">
-          <Button ariaLabel="">Contactez-nous</Button>
+          <Button
+            ariaLabel="Contactez-nous"
+            className={clsx(isMobile && "rounded-full w-12 h-12 p-4")}
+            buttonType="link"
+            target="_blank"
+            baseUrl={`https://wa.me/${WHATSAPP_NUMBER}`}
+          >
+            {isMobile ? (
+              <Icons size={32} icon={WhatsappIcon} />
+            ) : (
+              "Contactez-nous"
+            )}
+          </Button>
         </Container>
       </Container>
     </header>

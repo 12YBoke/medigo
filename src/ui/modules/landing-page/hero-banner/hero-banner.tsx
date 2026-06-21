@@ -6,11 +6,16 @@ import WomanSmiling from "../../../../../public/Images/woman-smiling.png";
 import { StatsContent } from "@/lib/stats-content";
 import { CountUpAnimation } from "@/ui/components/count-up-animation/count-up-animation";
 import { Icons } from "@/ui/components/icons/icons";
+import { WHATSAPP_NUMBER } from "@/lib/contacts";
 
 export const HeroBanner = () => {
   return (
     <Container>
-      <Container className="bg-secondary-50 xl:px-40 2xl:px-60 relative flex flex-col md:flex-row items-center justify-center lg:h-screen pt-32 lg:pt-16 gap-8 lg:gap-0">
+      <Container className="relative bg-secondary-50 xl:px-40 2xl:px-60 flex flex-col md:flex-row items-center justify-center lg:h-screen pt-32 lg:pt-16 gap-8 lg:gap-0">
+        <Container
+          id="Statistics-Overview"
+          className="absolute bottom-16 left-0 right-0 h-4"
+        />
         <Container className="lg:flex-2/3 lg:h-full">
           <Container className="flex flex-col gap-4 items-center justify-center h-full">
             <Typography variant="display" className="text-center lg:text-left">
@@ -23,10 +28,20 @@ export const HeroBanner = () => {
               pharmacie.
             </Typography>
             <Container className="w-full justify-center lg:justify-start flex flex-row gap-4">
-              <Button ariaLabel="Commencer" variant="primary">
+              <Button
+                ariaLabel="Contactez-nous"
+                buttonType="link"
+                target="_blank"
+                baseUrl={`https://wa.me/${WHATSAPP_NUMBER}`}
+              >
                 Contactez-nous
               </Button>
-              <Button ariaLabel="En savoir plus" variant="secondary">
+              <Button
+                ariaLabel="En savoir plus"
+                variant="secondary"
+                buttonType="link"
+                baseUrl="#Statistics-Overview"
+              >
                 En savoir plus
               </Button>
             </Container>

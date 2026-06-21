@@ -5,6 +5,7 @@ import { Typography } from "@/ui/components/typography/typography";
 import { Button } from "@/ui/components/button/button";
 import { PartnerBenefitsContent } from "@/lib/partner-benefits-content";
 import { Icons } from "@/ui/components/icons/icons";
+import { WHATSAPP_NUMBER } from "@/lib/contacts";
 
 export const ForPharmacies = () => {
   return (
@@ -46,8 +47,14 @@ export const ForPharmacies = () => {
         </Container>
 
         <Container>
-          <Button ariaLabel="Contactez-mous" variant="secondary">
-            Contatez-nous
+          <Button
+            ariaLabel="Contactez-nous"
+            variant="secondary"
+            buttonType="link"
+            target="_blank"
+            baseUrl={`https://wa.me/${WHATSAPP_NUMBER}`}
+          >
+            Contactez-nous
           </Button>
         </Container>
       </Container>

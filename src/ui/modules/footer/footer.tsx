@@ -7,16 +7,16 @@ import Logo from "../../../../public/Logo/logo_primary.webp";
 import { MainRoutes } from "@/routes/routes";
 import { Icons } from "@/ui/components/icons/icons";
 import { Mail, Phone } from "@hugeicons/core-free-icons";
+import { WHATSAPP_NUMBER } from "@/lib/contacts";
+import { FormatPhoneNumber } from "@/lib/format-phone-number";
 
 interface Props {
   hideLinks?: boolean;
 }
 
-const WHATSAPP_NUMBER = "243990391826";
-
 export const Footer = ({ hideLinks = false }: Props) => {
   return (
-    <Container className="bg-black px-4 lg:px-24 pt-16 pb-8 flex flex-col gap-12">
+    <Container className="bg-black px-4 lg:px-24 py-16 flex flex-col gap-12">
       {!hideLinks && (
         <>
           <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -54,7 +54,7 @@ export const Footer = ({ hideLinks = false }: Props) => {
                   <Icons icon={Phone} size={16} className="text-primary-300" />
                   <Container className="flex flex-col gap-0.5">
                     <Typography variant="small" className="text-neutral-400">
-                      +243 810 000 000
+                      {FormatPhoneNumber(WHATSAPP_NUMBER).internationalNumber}
                     </Typography>
                   </Container>
                 </Container>
@@ -68,7 +68,7 @@ export const Footer = ({ hideLinks = false }: Props) => {
               <Link
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
-                className="inline-flex items-center gap-2 text-body-sm text-primary-300 hover:text-primary-200 transition-colors"
+                className="inline-flex items-center gap-2 text-small lg:text-small-lg text-primary-300 hover:text-primary-200 transition-colors"
               >
                 Nous écrire sur WhatsApp →
               </Link>
@@ -81,10 +81,10 @@ export const Footer = ({ hideLinks = false }: Props) => {
 
       {/* Bas de footer */}
       <Container className="flex flex-col md:flex-row gap-2 items-center justify-between">
-        <Typography className="text-neutral-300">
+        <Typography variant="small" className="text-neutral-300">
           © {new Date().getFullYear()} . Tous droits réservés.
         </Typography>
-        <Typography className="text-neutral-300">
+        <Typography variant="small" className="text-neutral-300">
           Site conçu et développé par{" "}
           <Link
             href=""
